@@ -1,0 +1,40 @@
+{
+  "name": "pretty-react-player",
+  "version": "1.0.0",
+  "description": "Music player made in React.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": ["dist"],
+  "scripts": {
+    "build":"rm -rf dist/ && prettier --write src/ && npm run build:esm && npm run build:cjs",
+    "build:esm":"tsc",
+    "build:cjs": "tsc --module CommonJS --outDir dist/cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elumion/pretty-react-player.git"
+  },
+  "keywords": [
+    "Player",
+    "Music",
+    "React"
+  ],
+  "author": "Elumion",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Elumion/pretty-react-player/issues"
+  },
+  "homepage": "https://github.com/Elumion/pretty-react-player#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.38",
+    "@types/react": "^18.0.10",
+    "@types/react-dom": "^18.0.5",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "typescript": "^4.7.2"
+  },
+  "peerDependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  }
+}
